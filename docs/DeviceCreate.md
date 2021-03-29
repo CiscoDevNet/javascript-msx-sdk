@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**serviceId** | **String** |  | [optional] 
+**serviceInstanceId** | **String** |  | [optional] 
 **subscriptionId** | **String** |  | [optional] 
 **tenantId** | **String** |  | 
 **name** | **String** |  | 

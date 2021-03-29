@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **providerId** | **String** |  | [optional] 
 **createdOn** | **Date** |  | [optional] 
 **modifiedOn** | **Date** |  | [optional] 
-**serviceId** | **String** |  | [optional] 
+**serviceInstanceId** | **String** |  | [optional] 
 **subscriptionId** | **String** |  | [optional] 
 **tenantId** | **String** |  | 
 **name** | **String** |  | 

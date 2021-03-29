@@ -352,7 +352,7 @@ Remove services from a site.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.SitesApi();
-let id = null; // String | 
+let id = "id_example"; // String | 
 let requestBody = ["null"]; // [String] | 
 apiInstance.removeServicesFromSite(id, requestBody).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -367,7 +367,7 @@ apiInstance.removeServicesFromSite(id, requestBody).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
+ **id** | **String**|  | 
  **requestBody** | [**[String]**](String.md)|  | 
 
 ### Return type

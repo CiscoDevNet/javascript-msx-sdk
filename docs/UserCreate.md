@@ -11,6 +11,6 @@ Name | Type | Description | Notes
 **tenantIds** | **[String]** |  | [optional] 
 **passwordPolicyName** | **String** |  | 
 **username** | **String** |  | [optional] 
-**password** | **String** |  | 
+**password** | **String** |  | [optional] 
 
 
