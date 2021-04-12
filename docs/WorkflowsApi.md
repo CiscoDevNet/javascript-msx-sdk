@@ -60,7 +60,7 @@ No authorization required
 
 ## exportWorkflow
 
-> String exportWorkflow(id)
+> {String: Object} exportWorkflow(id)
 
 Exports a workflow.
 
@@ -88,7 +88,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+**{String: Object}**
 
 ### Authorization
 
@@ -232,7 +232,7 @@ No authorization required
 
 ## importWorkflow
 
-> WorkflowMapping importWorkflow(tenantIds, requestBody, opts)
+> WorkflowMapping importWorkflow(requestBody, opts)
 
 Imports a workflow.
 
@@ -242,12 +242,12 @@ Imports a workflow.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.WorkflowsApi();
-let tenantIds = ["null"]; // [String] | 
 let requestBody = {"workflow":{"unique_name":"definition_workflow_1flwhkwsayquzQyyfgz6tdRoyK2","name":"Health Check Atomic","title":"Health Check Atomic","type":"generic.workflow","base_type":"workflow","variables":[{"schema_id":"1flwhm42MFVKT16QCVpnzTV3NDL","properties":{"value":"","scope":"input","name":"service_name","type":"datatype.string"},"unique_name":"variable_workflow_1flwhkauAJQe4uzBvUDvCBdY2HM","object_type":"variable_workflow"}],"properties":{"atomic":{"is_atomic":false},"delete_workflow_instance":false,"display_name":"Health Check Atomic","favorite":false,"target":{"target_type":"web-service.endpoint","target_id":"definition_target_1flwhpdkMV95YN7uSm2ygMYsVe2","execute_on_workflow_target":true}},"object_type":"definition_workflow","actions":[{"unique_name":"definition_activity_1flwhq819QYFkMjAfPWDcg4zliI","name":"HTTP Request","title":"HTTP Request","type":"web-service.http_request","base_type":"activity","properties":{"accept":"application/json","action_timeout":180,"allow_auto_redirect":true,"content_type":"application/json","continue_on_error_status_code":false,"continue_on_failure":false,"custom_headers":[{"name":"Content-type","value":"application/vnd.spring-boot.actuator.v1+json"}],"display_name":"HTTP Request","method":"GET","relative_url":"/$workflow.definition_workflow_1flwhkwsayquzQyyfgz6tdRoyK2.input.variable_workflow_1flwhkauAJQe4uzBvUDvCBdY2HM$/admin/health","runtime_user":{"override_target_runtime_user":false,"target_default":true},"target":{"override_workflow_target":false,"use_workflow_target":true}},"object_type":"definition_activity"}]},"targets":{"definition_target_1flwhpdkMV95YN7uSm2ygMYsVe2":{"unique_name":"definition_target_1flwhpdkMV95YN7uSm2ygMYsVe2","name":"Router Service","title":"Router Service","type":"web-service.endpoint","base_type":"target","object_type":"definition_target","properties":{"description":"Router Service","disable_certificate_validation":true,"display_name":"Router Service","host":"dev-plt-aio1.lab.ciscomsx.com","no_runtime_user":true,"port":-1,"protocol":"https"}}}}; // {String: Object} | 
 let opts = {
+  'tenantIds': ["null"], // [String] | 
   'global': true // Boolean | 
 };
-apiInstance.importWorkflow(tenantIds, requestBody, opts).then((data) => {
+apiInstance.importWorkflow(requestBody, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -260,8 +260,8 @@ apiInstance.importWorkflow(tenantIds, requestBody, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tenantIds** | [**[String]**](String.md)|  | 
  **requestBody** | [**{String: Object}**](Object.md)|  | 
+ **tenantIds** | [**[String]**](String.md)|  | [optional] 
  **global** | **Boolean**|  | [optional] 
 
 ### Return type

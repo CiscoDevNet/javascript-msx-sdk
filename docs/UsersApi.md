@@ -26,7 +26,7 @@ Creates a new user.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.UsersApi();
-let userCreate = {"firstName":"Tom","lastName":"Baker","email":"noreply@cisco.com","roleIds":["c0895f00-d5d5-11ea-b88a-a7053c652ef4"],"tenantIds":["18992931-6ced-4133-9101-da6e4b83a5df"],"passwordPolicyName":"ppolicy_default","username":"TBaker","password":"Password@1"}; // UserCreate | 
+let userCreate = {"firstName":"Tom","lastName":"Baker","email":"noreply@cisco.com","roleIds":["c0895f00-d5d5-11ea-b88a-a7053c652ef4"],"tenantIds":["18992931-6ced-4133-9101-da6e4b83a5df"],"passwordPolicyName":"ppolicy_default","locale":"en_US","username":"TBaker","password":"Password@1"}; // UserCreate | 
 apiInstance.createUser(userCreate).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -241,7 +241,7 @@ import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.UsersApi();
 let id = null; // String | 
-let userUpdate = {"firstName":"Christopher","lastName":"Eccleston","email":"noreply@cisco.com","roleIds":["c0895f00-d5d5-11ea-b88a-a7053c652ef4"],"tenantIds":["39ed2f7a-baf9-48b0-ad96-7f7828dc8b38"],"passwordPolicyName":"ppolicy_default"}; // UserUpdate | 
+let userUpdate = {"firstName":"Christopher","lastName":"Eccleston","email":"noreply@cisco.com","roleIds":["c0895f00-d5d5-11ea-b88a-a7053c652ef4"],"tenantIds":["39ed2f7a-baf9-48b0-ad96-7f7828dc8b38"],"passwordPolicyName":"ppolicy_default","locale":"en_US"}; // UserUpdate | 
 apiInstance.updateUser(id, userUpdate).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {

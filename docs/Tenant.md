@@ -8,11 +8,11 @@ Name | Type | Description | Notes
 **createdOn** | **Date** |  | [optional] [readonly] 
 **modifiedOn** | **Date** |  | [optional] [readonly] 
 **suspended** | **Boolean** |  | [optional] [readonly] 
+**numberOfChildren** | **Number** |  | [optional] [readonly] 
+**parentId** | **String** |  | [optional] 
 **name** | **String** |  | 
 **description** | **String** |  | [optional] 
 **url** | **String** |  | [optional] 
 **image** | **String** |  | [optional] 
-**parentId** | **String** |  | [optional] 
-**numberOfChildren** | **Number** |  | [optional] [readonly] 
 
 

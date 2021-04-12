@@ -4,18 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **String** |  | 
-**description** | **String** |  | [optional] 
-**version** | **String** |  | [optional] 
-**serviceType** | **String** |  | 
-**deviceModels** | **[String]** |  | [optional] 
-**configContent** | **String** |  | 
-**resourceProvider** | **String** |  | 
-**templateStandard** | **String** |  | [optional] 
-**tenantAccess** | [**DeviceTemplateAccess**](DeviceTemplateAccess.md) |  | [optional] 
-**templateParameterValidators** | [**[TemplateParameterValidator]**](TemplateParameterValidator.md) |  | [optional] 
 **id** | **String** |  | [optional] [readonly] 
 **userId** | **String** |  | [optional] [readonly] 
 **createdOn** | **Date** |  | [optional] [readonly] 
+**name** | **String** |  | [optional] 
+**description** | **String** |  | [optional] 
+**version** | **String** |  | [optional] 
+**serviceType** | **String** |  | [optional] 
+**deviceModels** | **[String]** |  | [optional] 
+**configContent** | **String** |  | [optional] 
+**resourceProvider** | **String** |  | [optional] 
+**templateStandard** | **String** |  | [optional] 
+**tenantAccess** | [**DeviceTemplateAccess**](DeviceTemplateAccess.md) |  | [optional] 
+**templateParameterValidators** | [**[TemplateParameterValidator]**](TemplateParameterValidator.md) |  | [optional] 
 
 

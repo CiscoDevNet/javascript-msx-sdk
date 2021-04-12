@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **createdOn** | **Date** |  | [optional] [readonly] 
 **modifiedOn** | **Date** |  | [optional] [readonly] 
 **provisionedOn** | **Date** |  | [optional] [readonly] 
-**status** | **{String: String}** |  | [optional] 
+**status** | **{String: Object}** |  | [optional] 
 **definitionAttributes** | **{String: Object}** |  | [optional] 
 **attributes** | **{String: Object}** |  | [optional] 
 

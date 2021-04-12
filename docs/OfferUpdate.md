@@ -15,6 +15,6 @@ Name | Type | Description | Notes
 **type** | **String** |  | [optional] 
 **supportedProperties** | **[String]** |  | 
 **supportedOptions** | [**[NameValue]**](NameValue.md) |  | 
-**approvals** | **{String: [String]}** |  | [optional] 
+**approvals** | **{String: Object}** |  | [optional] 
 
 

@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **image** | **String** |  | [optional] 
 **attributes** | **{String: String}** |  | [optional] 
 **devices** | [**[DeviceSummary]**](DeviceSummary.md) |  | [optional] 
-**serviceInstanceIds** | **[String]** |  | [optional] 
+**serviceIds** | **[String]** |  | [optional] 
 **location** | [**SiteLocation**](SiteLocation.md) |  | [optional] 
 **status** | [**SiteStatus**](SiteStatus.md) |  | [optional] 
 **createdOn** | **Date** |  | [optional] [readonly] 

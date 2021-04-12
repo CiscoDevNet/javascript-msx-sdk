@@ -4,61 +4,15 @@ All URIs are relative to *http://localhost:8765*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**addProductAssignments**](ProductsApi.md#addProductAssignments) | **POST** /consume/api/v8/products/{id}/assignments/add | Assigns a product to one or more tenants.
 [**createProduct**](ProductsApi.md#createProduct) | **POST** /consume/api/v8/products | Creates a product.
 [**deleteProduct**](ProductsApi.md#deleteProduct) | **DELETE** /consume/api/v8/products/{id} | Deletes a product.
 [**getProduct**](ProductsApi.md#getProduct) | **GET** /consume/api/v8/products/{id} | Returns a product.
 [**getProductAssignmentsList**](ProductsApi.md#getProductAssignmentsList) | **GET** /consume/api/v8/products/{id}/assignments/list | Returns a list of tenant assignments for a product .
 [**getProductsCount**](ProductsApi.md#getProductsCount) | **GET** /consume/api/v8/products/count | Returns the number of products.
 [**getProductsPage**](ProductsApi.md#getProductsPage) | **GET** /consume/api/v8/products | Returns a page of products.
-[**removeProductAssignments**](ProductsApi.md#removeProductAssignments) | **POST** /consume/api/v8/products/{id}/assignments/remove | Unassigns a product from one or more tenants
 [**updateProduct**](ProductsApi.md#updateProduct) | **PUT** /consume/api/v8/products/{id} | Updates a product.
 [**updateProductAssignments**](ProductsApi.md#updateProductAssignments) | **PUT** /consume/api/v8/products/{id}/assignments | Updates the tenant assignments for a product.
 
-
-
-## addProductAssignments
-
-> [CatalogAssignment] addProductAssignments(id, requestBody)
-
-Assigns a product to one or more tenants.
-
-### Example
-
-```javascript
-import JavascriptMsxSdk from 'javascript-msx-sdk';
-
-let apiInstance = new JavascriptMsxSdk.ProductsApi();
-let id = null; // String | 
-let requestBody = ["e8ff9360-c8f1-4f06-84d8-d8105bd29e1e","3c64b303-ec28-4fe2-99b5-13f521b92700","48feaddb-45d0-4126-a216-3e450bfdbba4"]; // [String] | 
-apiInstance.addProductAssignments(id, requestBody).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
- **requestBody** | [**[String]**](String.md)|  | 
-
-### Return type
-
-[**[CatalogAssignment]**](CatalogAssignment.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
 
 
 ## createProduct
@@ -318,50 +272,6 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## removeProductAssignments
-
-> [CatalogAssignment] removeProductAssignments(id, requestBody)
-
-Unassigns a product from one or more tenants
-
-### Example
-
-```javascript
-import JavascriptMsxSdk from 'javascript-msx-sdk';
-
-let apiInstance = new JavascriptMsxSdk.ProductsApi();
-let id = null; // String | 
-let requestBody = ["e8ff9360-c8f1-4f06-84d8-d8105bd29e1e","3c64b303-ec28-4fe2-99b5-13f521b92700","48feaddb-45d0-4126-a216-3e450bfdbba4"]; // [String] | 
-apiInstance.removeProductAssignments(id, requestBody).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
- **requestBody** | [**[String]**](String.md)|  | 
-
-### Return type
-
-[**[CatalogAssignment]**](CatalogAssignment.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
 - **Accept**: application/json
 
 

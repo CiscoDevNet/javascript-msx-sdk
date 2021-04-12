@@ -14,18 +14,18 @@
 import ApiClient from '../ApiClient';
 
 /**
- * The LegacyAbsoluteConfig model module.
- * @module model/LegacyAbsoluteConfig
+ * The TenantCreateAllOf model module.
+ * @module model/TenantCreateAllOf
  * @version 1.0.2
  */
-class LegacyAbsoluteConfig {
+class TenantCreateAllOf {
     /**
-     * Constructs a new <code>LegacyAbsoluteConfig</code>.
-     * @alias module:model/LegacyAbsoluteConfig
+     * Constructs a new <code>TenantCreateAllOf</code>.
+     * @alias module:model/TenantCreateAllOf
      */
     constructor() { 
         
-        LegacyAbsoluteConfig.initialize(this);
+        TenantCreateAllOf.initialize(this);
     }
 
     /**
@@ -37,18 +37,18 @@ class LegacyAbsoluteConfig {
     }
 
     /**
-     * Constructs a <code>LegacyAbsoluteConfig</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>TenantCreateAllOf</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/LegacyAbsoluteConfig} obj Optional instance to populate.
-     * @return {module:model/LegacyAbsoluteConfig} The populated <code>LegacyAbsoluteConfig</code> instance.
+     * @param {module:model/TenantCreateAllOf} obj Optional instance to populate.
+     * @return {module:model/TenantCreateAllOf} The populated <code>TenantCreateAllOf</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new LegacyAbsoluteConfig();
+            obj = obj || new TenantCreateAllOf();
 
-            if (data.hasOwnProperty('dateTime')) {
-                obj['dateTime'] = ApiClient.convertToType(data['dateTime'], 'String');
+            if (data.hasOwnProperty('parentId')) {
+                obj['parentId'] = ApiClient.convertToType(data['parentId'], 'String');
             }
         }
         return obj;
@@ -58,14 +58,14 @@ class LegacyAbsoluteConfig {
 }
 
 /**
- * @member {String} dateTime
+ * @member {String} parentId
  */
-LegacyAbsoluteConfig.prototype['dateTime'] = undefined;
+TenantCreateAllOf.prototype['parentId'] = undefined;
 
 
 
 
 
 
-export default LegacyAbsoluteConfig;
+export default TenantCreateAllOf;
 

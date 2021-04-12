@@ -10,5 +10,6 @@ Name | Type | Description | Notes
 **roleIds** | **[String]** |  | [optional] 
 **tenantIds** | **[String]** |  | [optional] 
 **passwordPolicyName** | **String** |  | 
+**locale** | **String** |  | [optional] 
 
 

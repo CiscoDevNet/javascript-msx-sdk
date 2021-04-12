@@ -4,61 +4,15 @@ All URIs are relative to *http://localhost:8765*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**addOfferAssignments**](OffersApi.md#addOfferAssignments) | **POST** /consume/api/v8/offers/{id}/assignments/add | Assigns a product offer to one or more tenants.
 [**createOffer**](OffersApi.md#createOffer) | **POST** /consume/api/v8/offers | Creates a product offer.
 [**deleteOffer**](OffersApi.md#deleteOffer) | **DELETE** /consume/api/v8/offers/{id} | Deletes a product offer
 [**getOffer**](OffersApi.md#getOffer) | **GET** /consume/api/v8/offers/{id} | Returns a product offer.
 [**getOfferAssignmentsList**](OffersApi.md#getOfferAssignmentsList) | **GET** /consume/api/v8/offers/{id}/assignments/list | Returns a list of tenant assignments for a product offer.
 [**getOffersCount**](OffersApi.md#getOffersCount) | **GET** /consume/api/v8/offers/count | Returns the number of product offers.
 [**getOffersPage**](OffersApi.md#getOffersPage) | **GET** /consume/api/v8/offers | Returns a page of product offers.
-[**removeOfferAssignments**](OffersApi.md#removeOfferAssignments) | **POST** /consume/api/v8/offers/{id}/assignments/remove | Unassigns a product offer from one or more tenants.
 [**updateOffer**](OffersApi.md#updateOffer) | **PUT** /consume/api/v8/offers/{id} | Updates a product offer.
 [**updateOfferAssignments**](OffersApi.md#updateOfferAssignments) | **PUT** /consume/api/v8/offers/{id}/assignments | Updates the tenant assignemnts for a product offer.
 
-
-
-## addOfferAssignments
-
-> [CatalogAssignment] addOfferAssignments(id, requestBody)
-
-Assigns a product offer to one or more tenants.
-
-### Example
-
-```javascript
-import JavascriptMsxSdk from 'javascript-msx-sdk';
-
-let apiInstance = new JavascriptMsxSdk.OffersApi();
-let id = null; // String | 
-let requestBody = ["e8ff9360-c8f1-4f06-84d8-d8105bd29e1e","3c64b303-ec28-4fe2-99b5-13f521b92700","48feaddb-45d0-4126-a216-3e450bfdbba4"]; // [String] | 
-apiInstance.addOfferAssignments(id, requestBody).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
- **requestBody** | [**[String]**](String.md)|  | 
-
-### Return type
-
-[**[CatalogAssignment]**](CatalogAssignment.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
 
 
 ## createOffer
@@ -291,7 +245,7 @@ let page = 0; // Number |
 let pageSize = 10; // Number | 
 let opts = {
   'productId': null, // String | 
-  'tenantId': null // String | 
+  'tenantIds': ["null"] // [String] | 
 };
 apiInstance.getOffersPage(page, pageSize, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -309,7 +263,7 @@ Name | Type | Description  | Notes
  **page** | **Number**|  | 
  **pageSize** | **Number**|  | 
  **productId** | [**String**](.md)|  | [optional] 
- **tenantId** | [**String**](.md)|  | [optional] 
+ **tenantIds** | [**[String]**](String.md)|  | [optional] 
 
 ### Return type
 
@@ -322,50 +276,6 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## removeOfferAssignments
-
-> [CatalogAssignment] removeOfferAssignments(id, requestBody)
-
-Unassigns a product offer from one or more tenants.
-
-### Example
-
-```javascript
-import JavascriptMsxSdk from 'javascript-msx-sdk';
-
-let apiInstance = new JavascriptMsxSdk.OffersApi();
-let id = null; // String | 
-let requestBody = ["e8ff9360-c8f1-4f06-84d8-d8105bd29e1e","3c64b303-ec28-4fe2-99b5-13f521b92700","48feaddb-45d0-4126-a216-3e450bfdbba4"]; // [String] | 
-apiInstance.removeOfferAssignments(id, requestBody).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
- **requestBody** | [**[String]**](String.md)|  | 
-
-### Return type
-
-[**[CatalogAssignment]**](CatalogAssignment.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
 - **Accept**: application/json
 
 
