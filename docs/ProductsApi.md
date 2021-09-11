@@ -1,6 +1,6 @@
 # JavascriptMsxSdk.ProductsApi
 
-All URIs are relative to *http://localhost:8765*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -27,7 +27,7 @@ Creates a product.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.ProductsApi();
-let productCreate = {"name":"vbranch","label":"cisco.catalog.service.vbranch.name","version":"1","description":"cisco.catalog.service.vbranch.description","image":"/services/vbranch/images/icons/image_vbranch_service.svg","orderLimit":1,"multipleInstanceAllowed":false,"price":500,"unitOfMeasure":null,"options":[],"properties":[],"bandwidthPrioritization":null,"configuration":{"device":"false","parts":"2","showOffers":"true","validation":"none"},"isResource":false,"hasChildren":false,"parentId":null,"serviceExtensions":[],"serviceConfigQueryRootXPaths":[],"uiConfig":null}; // ProductCreate | 
+let productCreate = {"name":"vbranch","label":"cisco.catalog.service.vbranch.name","version":"1","description":"cisco.catalog.service.vbranch.description","image":"/services/vbranch/images/icons/image_vbranch_service.svg","orderLimit":1,"multipleInstanceAllowed":false,"price":500,"unitOfMeasure":null,"options":[],"properties":[],"bandwidthPrioritization":null,"configuration":{"device":"false","parts":"2","showOffers":"true","validation":"none"},"isResource":false,"hasChildren":false,"parentId":null,"serviceExtensions":[],"serviceConfigQueryRootXPaths":[],"uiConfig":null,"tags":["Preview","EFT"]}; // ProductCreate | 
 apiInstance.createProduct(productCreate).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -288,7 +288,7 @@ import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.ProductsApi();
 let id = null; // String | 
-let productUpdate = {"name":"vbranch","label":"cisco.catalog.service.vbranch.name","version":"1","description":"cisco.catalog.service.vbranch.description","image":"/services/vbranch/images/icons/image_vbranch_service.svg","orderLimit":1,"multipleInstanceAllowed":false,"price":500,"unitOfMeasure":null,"options":[],"properties":[],"bandwidthPrioritization":null,"configuration":{"device":"false","parts":"2","showOffers":"true","validation":"none"},"isResource":false,"hasChildren":false,"parentId":null,"serviceExtensions":[],"serviceConfigQueryRootXPaths":[],"uiConfig":null}; // ProductUpdate | 
+let productUpdate = {"name":"vbranch","label":"cisco.catalog.service.vbranch.name","version":"1","description":"cisco.catalog.service.vbranch.description","image":"/services/vbranch/images/icons/image_vbranch_service.svg","orderLimit":1,"multipleInstanceAllowed":false,"price":500,"unitOfMeasure":null,"options":[],"properties":[],"bandwidthPrioritization":null,"configuration":{"device":"false","parts":"2","showOffers":"true","validation":"none"},"isResource":false,"hasChildren":false,"parentId":null,"serviceExtensions":[],"serviceConfigQueryRootXPaths":[],"uiConfig":null,"tags":["Preview","EFT"]}; // ProductUpdate | 
 apiInstance.updateProduct(id, productUpdate).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {

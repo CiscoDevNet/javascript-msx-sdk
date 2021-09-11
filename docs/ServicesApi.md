@@ -1,6 +1,6 @@
 # JavascriptMsxSdk.ServicesApi
 
-All URIs are relative to *http://localhost:8765*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**getServicesPage**](ServicesApi.md#getServicesPage) | **GET** /manage/api/v8/services | Returns a page of services.
 [**submitOrder**](ServicesApi.md#submitOrder) | **POST** /manage/api/v8/services | Submits an order.
 [**updateOrder**](ServicesApi.md#updateOrder) | **PUT** /manage/api/v8/services | Updates an order.
+[**updateService**](ServicesApi.md#updateService) | **PUT** /manage/api/v8/services/{id} | Updates a service.
 
 
 
@@ -225,6 +226,50 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**LegacyServiceOrderResponse**](LegacyServiceOrderResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## updateService
+
+> Service updateService(id, serviceUpdate)
+
+Updates a service.
+
+### Example
+
+```javascript
+import JavascriptMsxSdk from 'javascript-msx-sdk';
+
+let apiInstance = new JavascriptMsxSdk.ServicesApi();
+let id = "id_example"; // String | 
+let serviceUpdate = {"status":{"lifeCycleStatus":"Provisioned"},"definitionAttributes":{"name":"Managed Device","offerName":"Managed Device","id":"5872e764-c459-11e7-abc4-cec278b6b50a","type":"manageddevice"},"attributes":{"template":"manageddevice-2.0.ftl","orchestrator":"ncs","platform-service-instance-id":"d5c9dc300232-4e8677d462dd49cab5298731a94c2da0-manageddevice","devices":"[{\"status-message\":\"Operation ADD on device CPE-828dcb62-2345-4b8f-b5af-5db230a95cd3 with serial number 97K7C3YDPY1 was a SUCCESS\",\"name\":\"CPE-828dcb62-2345-4b8f-b5af-5db230a95cd3\",\"attributes\":[{\"attrib-name\":\"ipaddress\",\"attrib-value\":\"10.254.0.1\"},{\"attrib-name\":\"hostname\",\"attrib-value\":\"CPE-828dcb62-2345-4b8f-b5af-5db230a95cd3\"},{\"attrib-name\":\"subtype\",\"attrib-value\":\"ISR\"},{\"attrib-name\":\"name\",\"attrib-value\":\"CPE-828dcb62-2345-4b8f-b5af-5db230a95cd3\"},{\"attrib-name\":\"ned-id\",\"attrib-value\":\"cisco-ios-cli-6.37\"},{\"attrib-name\":\"model\",\"attrib-value\":\"CSR1000V\"},{\"attrib-name\":\"serialKey\",\"attrib-value\":\"97K7C3YDPY1\"},{\"attrib-name\":\"type\",\"attrib-value\":\"CPE\"},{\"attrib-name\":\"category\",\"attrib-value\":\"CPE\"},{\"attrib-name\":\"version\",\"attrib-value\":\"16.9.5\"}],\"operation\":\"ADD\",\"status\":\"SUCCESS\"}]","name":"CPE-828dcb62-2345-4b8f-b5af-5db230a95cd3","provisionTimestamp":"Tue Aug 04 21:01:47 UTC 2020","provisionTimestampNumber":"1596574907112","version":"1"}}; // ServiceUpdate | 
+apiInstance.updateService(id, serviceUpdate).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**|  | 
+ **serviceUpdate** | [**ServiceUpdate**](ServiceUpdate.md)|  | 
+
+### Return type
+
+[**Service**](Service.md)
 
 ### Authorization
 

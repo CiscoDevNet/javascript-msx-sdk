@@ -1,10 +1,11 @@
 # JavascriptMsxSdk.DeviceTemplatesApi
 
-All URIs are relative to *http://localhost:8765*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createDeviceTemplate**](DeviceTemplatesApi.md#createDeviceTemplate) | **POST** /manage/api/v8/devicetemplates | Creates a device template.
+[**createDeviceTemplateVersion**](DeviceTemplatesApi.md#createDeviceTemplateVersion) | **POST** /manage/api/v8/devicetemplates/versions | Creates a new version of an existing device template.
 [**deleteDeviceTemplate**](DeviceTemplatesApi.md#deleteDeviceTemplate) | **DELETE** /manage/api/v8/devicetemplates/{id} | Deletes a device template.
 [**getDeviceTemplate**](DeviceTemplatesApi.md#getDeviceTemplate) | **GET** /manage/api/v8/devicetemplates/{id} | Returns a device template.
 [**getDeviceTemplatesList**](DeviceTemplatesApi.md#getDeviceTemplatesList) | **GET** /manage/api/v8/devicetemplates/list | Returns a list of device templates.
@@ -25,7 +26,7 @@ Creates a device template.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.DeviceTemplatesApi();
-let deviceTemplateCreate = {"name":"name-8d4a2628-06c0-436b-8a90-d90027917405","version":"v1","serviceType":"manageddevice","configContent":"string","templateStandard":"nso","tenantAccess":{"global":true}}; // DeviceTemplateCreate | 
+let deviceTemplateCreate = {"name":"name-8d4a2628-06c0-436b-8a90-d90027917405","serviceType":"manageddevice","configContent":"string","templateStandard":"nso","tenantAccess":{"global":true}}; // DeviceTemplateCreate | 
 apiInstance.createDeviceTemplate(deviceTemplateCreate).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -40,6 +41,48 @@ apiInstance.createDeviceTemplate(deviceTemplateCreate).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **deviceTemplateCreate** | [**DeviceTemplateCreate**](DeviceTemplateCreate.md)|  | 
+
+### Return type
+
+[**DeviceTemplate**](DeviceTemplate.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## createDeviceTemplateVersion
+
+> DeviceTemplate createDeviceTemplateVersion(deviceTemplateVersionCreate)
+
+Creates a new version of an existing device template.
+
+### Example
+
+```javascript
+import JavascriptMsxSdk from 'javascript-msx-sdk';
+
+let apiInstance = new JavascriptMsxSdk.DeviceTemplatesApi();
+let deviceTemplateVersionCreate = {"name":"string","configContent":"string"}; // DeviceTemplateVersionCreate | 
+apiInstance.createDeviceTemplateVersion(deviceTemplateVersionCreate).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **deviceTemplateVersionCreate** | [**DeviceTemplateVersionCreate**](DeviceTemplateVersionCreate.md)|  | 
 
 ### Return type
 
@@ -152,6 +195,7 @@ import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.DeviceTemplatesApi();
 let opts = {
+  'allVersions': false, // Boolean | 
   'serviceType': manageddevice, // String | 
   'tenantId': 2664f157-18d8-4ecd-8c78-66b7cb7e1e25 // String | 
 };
@@ -168,6 +212,7 @@ apiInstance.getDeviceTemplatesList(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **allVersions** | **Boolean**|  | [optional] [default to false]
  **serviceType** | **String**|  | [optional] 
  **tenantId** | [**String**](.md)|  | [optional] 
 

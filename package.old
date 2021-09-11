@@ -1,7 +1,7 @@
 {
   "name": "javascript-msx-sdk",
-  "version": "1.0.2",
-  "description": "MSX_Platform_SDK",
+  "version": "1.0.5",
+  "description": "MSX_SDK_client_",
   "license": "Apache License Version 2.0",
   "main": "dist/index.js",
   "scripts": {
