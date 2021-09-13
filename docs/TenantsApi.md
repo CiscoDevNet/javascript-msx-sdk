@@ -1,6 +1,6 @@
 # JavascriptMsxSdk.TenantsApi
 
-All URIs are relative to *http://localhost:8765*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -25,7 +25,7 @@ Creates a new tenant.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.TenantsApi();
-let tenantCreate = {"name":"Acme Company","description":"An anvil for every roadrunner.","url":"https://cisco.com"}; // TenantCreate | 
+let tenantCreate = {"name":"Acme Company","description":"An anvil for every roadrunner.","url":"https://cisco.com","email":"someone@cisco.com"}; // TenantCreate | 
 apiInstance.createTenant(tenantCreate).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -252,7 +252,7 @@ import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.TenantsApi();
 let id = null; // String | 
-let tenantUpdate = {"name":"Acme Company","description":"We sell rocket powered rollerskates.","url":"https://cisco.com"}; // TenantUpdate | 
+let tenantUpdate = {"name":"Acme Company","description":"We sell rocket powered rollerskates.","url":"https://cisco.com","email":"noreply@cisco.com"}; // TenantUpdate | 
 apiInstance.updateTenant(id, tenantUpdate).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {

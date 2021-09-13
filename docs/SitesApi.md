@@ -1,6 +1,6 @@
 # JavascriptMsxSdk.SitesApi
 
-All URIs are relative to *http://localhost:8765*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -250,6 +250,7 @@ let page = 0; // Number |
 let pageSize = 10; // Number | 
 let opts = {
   'tenantId': null, // String | 
+  'includeSubtenants': false, // Boolean | 
   'serviceId': "serviceId_example", // String | 
   'serviceType': "serviceType_example", // String | 
   'deviceId': "deviceId_example", // String | 
@@ -274,6 +275,7 @@ Name | Type | Description  | Notes
  **page** | **Number**|  | 
  **pageSize** | **Number**|  | 
  **tenantId** | [**String**](.md)|  | [optional] 
+ **includeSubtenants** | **Boolean**|  | [optional] [default to false]
  **serviceId** | **String**|  | [optional] 
  **serviceType** | **String**|  | [optional] 
  **deviceId** | **String**|  | [optional] 

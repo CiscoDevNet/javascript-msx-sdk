@@ -1,6 +1,6 @@
 # JavascriptMsxSdk.DevicesApi
 
-All URIs are relative to *http://localhost:8765*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -13,7 +13,9 @@ Method | HTTP request | Description
 [**getDeviceConfig**](DevicesApi.md#getDeviceConfig) | **GET** /manage/api/v8/devices/{id}/config | Returns the running configuration for a device.
 [**getDeviceTemplateHistory**](DevicesApi.md#getDeviceTemplateHistory) | **GET** /manage/api/v8/devices/{id}/templates | Returns device template history.
 [**getDevicesPage**](DevicesApi.md#getDevicesPage) | **GET** /manage/api/v8/devices | Returns a page of devices.
+[**patchDevice**](DevicesApi.md#patchDevice) | **PATCH** /manage/api/v8/devices/{id} | Update a device.
 [**redeployDevice**](DevicesApi.md#redeployDevice) | **POST** /manage/api/v8/devices/{id}/redeploy | Dedeploys a device.
+[**updateDevice**](DevicesApi.md#updateDevice) | **PUT** /manage/api/v8/devices/{id} | Update a device.
 [**updateDeviceTemplates**](DevicesApi.md#updateDeviceTemplates) | **PUT** /manage/api/v8/devices/{id}/templates | Update device templates that are already attached to a device.
 
 
@@ -387,7 +389,10 @@ let opts = {
   'names': ["null"], // [String] | 
   'versions': ["null"], // [String] | 
   'tenantIds': ["null"], // [String] | 
+  'includeSubtenants': false, // Boolean | 
   'severities': ["null"], // [String] | 
+  'complianceStates': [new JavascriptMsxSdk.DeviceComplianceState()], // [DeviceComplianceState] | 
+  'vulnerabilityStates': [new JavascriptMsxSdk.DeviceVulnerabilityState()], // [DeviceVulnerabilityState] | 
   'sortBy': name, // String | 
   'sortOrder': "'asc'" // String | 
 };
@@ -416,7 +421,10 @@ Name | Type | Description  | Notes
  **names** | [**[String]**](String.md)|  | [optional] 
  **versions** | [**[String]**](String.md)|  | [optional] 
  **tenantIds** | [**[String]**](String.md)|  | [optional] 
+ **includeSubtenants** | **Boolean**|  | [optional] [default to false]
  **severities** | [**[String]**](String.md)|  | [optional] 
+ **complianceStates** | [**[DeviceComplianceState]**](DeviceComplianceState.md)|  | [optional] 
+ **vulnerabilityStates** | [**[DeviceVulnerabilityState]**](DeviceVulnerabilityState.md)|  | [optional] 
  **sortBy** | **String**|  | [optional] 
  **sortOrder** | **String**|  | [optional] [default to &#39;asc&#39;]
 
@@ -431,6 +439,50 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## patchDevice
+
+> Device patchDevice(id, devicePatch)
+
+Update a device.
+
+### Example
+
+```javascript
+import JavascriptMsxSdk from 'javascript-msx-sdk';
+
+let apiInstance = new JavascriptMsxSdk.DevicesApi();
+let id = "id_example"; // String | 
+let devicePatch = new JavascriptMsxSdk.DevicePatch(); // DevicePatch | 
+apiInstance.patchDevice(id, devicePatch).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**|  | 
+ **devicePatch** | [**DevicePatch**](DevicePatch.md)|  | 
+
+### Return type
+
+[**Device**](Device.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 
@@ -473,6 +525,50 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## updateDevice
+
+> Device updateDevice(id, deviceUpdate)
+
+Update a device.
+
+### Example
+
+```javascript
+import JavascriptMsxSdk from 'javascript-msx-sdk';
+
+let apiInstance = new JavascriptMsxSdk.DevicesApi();
+let id = "id_example"; // String | 
+let deviceUpdate = new JavascriptMsxSdk.DeviceUpdate(); // DeviceUpdate | 
+apiInstance.updateDevice(id, deviceUpdate).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**|  | 
+ **deviceUpdate** | [**DeviceUpdate**](DeviceUpdate.md)|  | 
+
+### Return type
+
+[**Device**](Device.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 

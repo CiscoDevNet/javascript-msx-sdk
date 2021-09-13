@@ -1,6 +1,6 @@
 # JavascriptMsxSdk.WorkflowsApi
 
-All URIs are relative to *http://localhost:8765*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -341,7 +341,7 @@ let apiInstance = new JavascriptMsxSdk.WorkflowsApi();
 let id = "id_example"; // String | 
 let requestBody = {key: null}; // {String: Object} | 
 let opts = {
-  'tenantId': ["null"], // [String] | 
+  'tenantIds': ["null"], // [String] | 
   'global': true // Boolean | 
 };
 apiInstance.updateWorkflow(id, requestBody, opts).then((data) => {
@@ -359,7 +359,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  | 
  **requestBody** | [**{String: Object}**](Object.md)|  | 
- **tenantId** | [**[String]**](String.md)|  | [optional] 
+ **tenantIds** | [**[String]**](String.md)|  | [optional] 
  **global** | **Boolean**|  | [optional] 
 
 ### Return type

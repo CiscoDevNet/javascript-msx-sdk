@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **name** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
 **version** | **String** |  | [optional] 
+**isLatestVersion** | **Boolean** |  | [optional] 
 **serviceType** | **String** |  | [optional] 
 **deviceModels** | **[String]** |  | [optional] 
 **configContent** | **String** |  | [optional] 
@@ -17,5 +18,6 @@ Name | Type | Description | Notes
 **templateStandard** | **String** |  | [optional] 
 **tenantAccess** | [**DeviceTemplateAccess**](DeviceTemplateAccess.md) |  | [optional] 
 **templateParameterValidators** | [**[TemplateParameterValidator]**](TemplateParameterValidator.md) |  | [optional] 
+**tags** | **[String]** |  | [optional] 
 
 

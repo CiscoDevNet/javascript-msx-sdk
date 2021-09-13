@@ -10,9 +10,11 @@ Name | Type | Description | Notes
 **suspended** | **Boolean** |  | [optional] [readonly] 
 **numberOfChildren** | **Number** |  | [optional] [readonly] 
 **parentId** | **String** |  | [optional] 
+**externalId** | **String** |  | [optional] 
 **name** | **String** |  | 
 **description** | **String** |  | [optional] 
 **url** | **String** |  | [optional] 
 **image** | **String** |  | [optional] 
+**email** | **String** |  | [optional] 
 
 
