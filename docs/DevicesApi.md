@@ -5,6 +5,7 @@ All URIs are relative to *http://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**attachDeviceTemplates**](DevicesApi.md#attachDeviceTemplates) | **POST** /manage/api/v8/devices/{id}/templates | Attaches one or more device templates to a device instance.
+[**batchAttachDeviceTemplates**](DevicesApi.md#batchAttachDeviceTemplates) | **POST** /manage/api/v8/devices/templates/attach | Attaches one or more device templates to a batch of device instances.
 [**createDevice**](DevicesApi.md#createDevice) | **POST** /manage/api/v8/devices | Creates a device.
 [**deleteDevice**](DevicesApi.md#deleteDevice) | **DELETE** /manage/api/v8/devices/{id} | Deletes a device.
 [**detachDeviceTemplate**](DevicesApi.md#detachDeviceTemplate) | **DELETE** /manage/api/v8/devices/{id}/templates/{templateId} | Detaches a template from a device.
@@ -53,6 +54,48 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**[DeviceTemplateHistory]**](DeviceTemplateHistory.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## batchAttachDeviceTemplates
+
+> [Array] batchAttachDeviceTemplates(deviceTemplateBatchAttachRequest)
+
+Attaches one or more device templates to a batch of device instances.
+
+### Example
+
+```javascript
+import JavascriptMsxSdk from 'javascript-msx-sdk';
+
+let apiInstance = new JavascriptMsxSdk.DevicesApi();
+let deviceTemplateBatchAttachRequest = new JavascriptMsxSdk.DeviceTemplateBatchAttachRequest(); // DeviceTemplateBatchAttachRequest | 
+apiInstance.batchAttachDeviceTemplates(deviceTemplateBatchAttachRequest).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **deviceTemplateBatchAttachRequest** | [**DeviceTemplateBatchAttachRequest**](DeviceTemplateBatchAttachRequest.md)|  | 
+
+### Return type
+
+**[Array]**
 
 ### Authorization
 
@@ -315,7 +358,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: text/plain, application/json
 
 
 ## getDeviceTemplateHistory

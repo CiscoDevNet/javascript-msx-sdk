@@ -10,11 +10,11 @@ Name | Type | Description | Notes
 **productId** | **String** |  | 
 **version** | **Number** |  | 
 **displayOrder** | **Number** |  | 
-**image** | **String** |  | 
+**image** | **String** |  | [optional] 
 **price** | **String** |  | [optional] 
 **type** | **String** |  | [optional] 
-**supportedProperties** | **[String]** |  | 
-**supportedOptions** | [**[NameValue]**](NameValue.md) |  | 
+**supportedProperties** | **[String]** |  | [optional] 
+**supportedOptions** | [**[NameValue]**](NameValue.md) |  | [optional] 
 **approvals** | **{String: Object}** |  | [optional] 
 
 

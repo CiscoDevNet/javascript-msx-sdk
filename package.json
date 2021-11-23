@@ -1,13 +1,13 @@
 {
   "name": "javascript-msx-sdk",
-  "version": "1.0.5",
+  "version": "1.0.8",
   "description": "MSX_SDK_client_",
-  "license": "Apache License Version 2.0",
+  "license": "MIT",
   "main": "dist/index.js",
   "scripts": {
     "build": "babel src -d dist",
     "prepack": "npm run build",
-    "prepare": "npm run build",
+	"prepare": "npm run build",
     "test": "mocha --require @babel/register --recursive"
   },
   "browser": {
