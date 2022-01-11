@@ -1,6 +1,6 @@
 {
   "name": "javascript-msx-sdk",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "MSX_SDK_client_",
   "license": "MIT",
   "main": "dist/index.js",
