@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**createTenant**](TenantsApi.md#createTenant) | **POST** /idm/api/v8/tenants | Creates a new tenant.
 [**deleteTenant**](TenantsApi.md#deleteTenant) | **DELETE** /idm/api/v8/tenants/{id} | Deletes a tenant by id.
 [**getTenant**](TenantsApi.md#getTenant) | **GET** /idm/api/v8/tenants/{id} | Returns a tenant by id.
+[**getTenantByExternalId**](TenantsApi.md#getTenantByExternalId) | **GET** /idm/api/v8/tenants/externalId/{externalId} | Returns a tenant by externalId.
 [**getTenantsList**](TenantsApi.md#getTenantsList) | **GET** /idm/api/v8/tenants/list | Returns a list of tenants.
 [**getTenantsPage**](TenantsApi.md#getTenantsPage) | **GET** /idm/api/v8/tenants | Returns a page of tenants.
 [**updateTenant**](TenantsApi.md#updateTenant) | **PUT** /idm/api/v8/tenants/{id} | Updates a tenant by id.
@@ -67,7 +68,7 @@ Deletes a tenant by id.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.TenantsApi();
-let id = null; // String | 
+let id = "id_example"; // String | 
 apiInstance.deleteTenant(id).then(() => {
   console.log('API called successfully.');
 }, (error) => {
@@ -81,7 +82,7 @@ apiInstance.deleteTenant(id).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
+ **id** | **String**|  | 
 
 ### Return type
 
@@ -109,7 +110,7 @@ Returns a tenant by id.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.TenantsApi();
-let id = null; // String | 
+let id = "id_example"; // String | 
 apiInstance.getTenant(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -123,7 +124,53 @@ apiInstance.getTenant(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
+ **id** | **String**|  | 
+
+### Return type
+
+[**Tenant**](Tenant.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getTenantByExternalId
+
+> Tenant getTenantByExternalId(externalId, opts)
+
+Returns a tenant by externalId.
+
+### Example
+
+```javascript
+import JavascriptMsxSdk from 'javascript-msx-sdk';
+
+let apiInstance = new JavascriptMsxSdk.TenantsApi();
+let externalId = "externalId_example"; // String | 
+let opts = {
+  'showImage': false // Boolean | 
+};
+apiInstance.getTenantByExternalId(externalId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **externalId** | **String**|  | 
+ **showImage** | **Boolean**|  | [optional] [default to false]
 
 ### Return type
 
@@ -200,7 +247,7 @@ let apiInstance = new JavascriptMsxSdk.TenantsApi();
 let page = 0; // Number | 
 let pageSize = 10; // Number | 
 let opts = {
-  'parentId': null, // String | 
+  'parentId': "parentId_example", // String | 
   'showImage': false, // Boolean | 
   'sortBy': name, // String | 
   'sortOrder': "'asc'" // String | 
@@ -220,7 +267,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Number**|  | 
  **pageSize** | **Number**|  | 
- **parentId** | [**String**](.md)|  | [optional] 
+ **parentId** | **String**|  | [optional] 
  **showImage** | **Boolean**|  | [optional] [default to false]
  **sortBy** | **String**|  | [optional] 
  **sortOrder** | **String**|  | [optional] [default to &#39;asc&#39;]
@@ -251,7 +298,7 @@ Updates a tenant by id.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.TenantsApi();
-let id = null; // String | 
+let id = "id_example"; // String | 
 let tenantUpdate = {"name":"Acme Company","description":"We sell rocket powered rollerskates.","url":"https://cisco.com","email":"noreply@cisco.com"}; // TenantUpdate | 
 apiInstance.updateTenant(id, tenantUpdate).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -266,7 +313,7 @@ apiInstance.updateTenant(id, tenantUpdate).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
+ **id** | **String**|  | 
  **tenantUpdate** | [**TenantUpdate**](TenantUpdate.md)|  | 
 
 ### Return type

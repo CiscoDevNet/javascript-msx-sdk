@@ -70,7 +70,7 @@ Needs MANAGE_PRICES permission to delete a price.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.BillingPricesApi();
-let id = null; // String | 
+let id = "id_example"; // String | 
 apiInstance.deletePrice(id).then(() => {
   console.log('API called successfully.');
 }, (error) => {
@@ -84,7 +84,7 @@ apiInstance.deletePrice(id).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
+ **id** | **String**|  | 
 
 ### Return type
 
@@ -114,7 +114,7 @@ Needs VIEW_PRICES permission to get pricing detail.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.BillingPricesApi();
-let id = null; // String | 
+let id = "id_example"; // String | 
 apiInstance.getPrice(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -128,7 +128,7 @@ apiInstance.getPrice(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
+ **id** | **String**|  | 
 
 ### Return type
 
@@ -158,7 +158,7 @@ Needs VIEW_PRICES permission to view the pricing details.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.BillingPricesApi();
-let tenantId = null; // String | 
+let tenantId = "tenantId_example"; // String | 
 let page = 0; // Number | 
 let pageSize = 10; // Number | 
 let opts = {
@@ -178,7 +178,7 @@ apiInstance.getPricesPage(tenantId, page, pageSize, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tenantId** | [**String**](.md)|  | 
+ **tenantId** | **String**|  | 
  **page** | **Number**|  | 
  **pageSize** | **Number**|  | 
  **type** | **String**|  | [optional] 
@@ -212,7 +212,7 @@ Needs MANAGE_PRICES permission to update a pricing detail.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.BillingPricesApi();
-let id = null; // String | 
+let id = "id_example"; // String | 
 let billingPriceUpdate = new JavascriptMsxSdk.BillingPriceUpdate(); // BillingPriceUpdate | 
 apiInstance.updatePrice(id, billingPriceUpdate).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -227,7 +227,7 @@ apiInstance.updatePrice(id, billingPriceUpdate).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
+ **id** | **String**|  | 
  **billingPriceUpdate** | [**BillingPriceUpdate**](BillingPriceUpdate.md)|  | 
 
 ### Return type

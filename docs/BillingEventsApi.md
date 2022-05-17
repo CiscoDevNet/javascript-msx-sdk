@@ -24,7 +24,7 @@ Needs VIEW_COSTS permission to view cost details.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.BillingEventsApi();
-let tenantId = null; // String | 
+let tenantId = "tenantId_example"; // String | 
 let opts = {
   'fromDate': 2020-09-18T18:37:33.810Z, // Date | 
   'toDate': 2020-09-19T18:37:33.810Z, // Date | 
@@ -43,7 +43,7 @@ apiInstance.getCostSummary(tenantId, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tenantId** | [**String**](.md)|  | 
+ **tenantId** | **String**|  | 
  **fromDate** | **Date**|  | [optional] 
  **toDate** | **Date**|  | [optional] 
  **groupBy** | **String**|  | [optional] 
@@ -76,7 +76,7 @@ Needs VIEW_EVENTS permission to get a billing event.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.BillingEventsApi();
-let id = null; // String | 
+let id = "id_example"; // String | 
 apiInstance.getEvent(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -90,7 +90,7 @@ apiInstance.getEvent(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
+ **id** | **String**|  | 
 
 ### Return type
 
@@ -120,7 +120,7 @@ Needs VIEW_EVENTS permission to view the billing events.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.BillingEventsApi();
-let tenantId = null; // String | 
+let tenantId = "tenantId_example"; // String | 
 let page = 0; // Number | 
 let pageSize = 10; // Number | 
 let opts = {
@@ -142,7 +142,7 @@ apiInstance.getEventsPage(tenantId, page, pageSize, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tenantId** | [**String**](.md)|  | 
+ **tenantId** | **String**|  | 
  **page** | **Number**|  | 
  **pageSize** | **Number**|  | 
  **fromDate** | **Date**|  | [optional] 

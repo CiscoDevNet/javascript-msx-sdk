@@ -197,7 +197,7 @@ import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.WorkflowsApi();
 let opts = {
-  'tenantId': null, // String | 
+  'tenantId': "tenantId_example", // String | 
   'atomic': false // Boolean | 
 };
 apiInstance.getWorkflowsList(opts).then((data) => {
@@ -213,7 +213,7 @@ apiInstance.getWorkflowsList(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tenantId** | [**String**](.md)|  | [optional] 
+ **tenantId** | **String**|  | [optional] 
  **atomic** | **Boolean**|  | [optional] [default to false]
 
 ### Return type

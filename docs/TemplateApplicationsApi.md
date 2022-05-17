@@ -25,7 +25,7 @@ Applies a template to a target.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.TemplateApplicationsApi();
-let id = null; // String | 
+let id = "id_example"; // String | 
 let templateApplicationCreate = new JavascriptMsxSdk.TemplateApplicationCreate(); // TemplateApplicationCreate | 
 apiInstance.applyTemplate(id, templateApplicationCreate).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -40,7 +40,7 @@ apiInstance.applyTemplate(id, templateApplicationCreate).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
+ **id** | **String**|  | 
  **templateApplicationCreate** | [**TemplateApplicationCreate**](TemplateApplicationCreate.md)|  | 
 
 ### Return type
@@ -69,7 +69,7 @@ Deletes a template application.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.TemplateApplicationsApi();
-let id = null; // String | 
+let id = "id_example"; // String | 
 apiInstance.deleteTemplateApplication(id).then(() => {
   console.log('API called successfully.');
 }, (error) => {
@@ -83,7 +83,7 @@ apiInstance.deleteTemplateApplication(id).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
+ **id** | **String**|  | 
 
 ### Return type
 
@@ -111,7 +111,7 @@ Gets a template application.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.TemplateApplicationsApi();
-let id = null; // String | 
+let id = "id_example"; // String | 
 apiInstance.getTemplateApplication(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -125,7 +125,7 @@ apiInstance.getTemplateApplication(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
+ **id** | **String**|  | 
 
 ### Return type
 
@@ -153,7 +153,7 @@ Gets a template application history.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.TemplateApplicationsApi();
-let id = null; // String | 
+let id = "id_example"; // String | 
 apiInstance.getTemplateApplicationHistory(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -167,7 +167,7 @@ apiInstance.getTemplateApplicationHistory(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
+ **id** | **String**|  | 
 
 ### Return type
 
@@ -195,11 +195,11 @@ Get a page of template applications.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.TemplateApplicationsApi();
-let tenantId = null; // String | 
+let tenantId = "tenantId_example"; // String | 
 let page = 0; // Number | 
 let pageSize = 10; // Number | 
 let opts = {
-  'templateId': null, // String | 
+  'templateId': "templateId_example", // String | 
   'targetId': "targetId_example", // String | 
   'targetType': "targetType_example", // String | 
   'calculateTotalItems': true, // Boolean | 
@@ -219,10 +219,10 @@ apiInstance.getTemplateApplicationsPage(tenantId, page, pageSize, opts).then((da
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tenantId** | [**String**](.md)|  | 
+ **tenantId** | **String**|  | 
  **page** | **Number**|  | 
  **pageSize** | **Number**|  | 
- **templateId** | [**String**](.md)|  | [optional] 
+ **templateId** | **String**|  | [optional] 
  **targetId** | **String**|  | [optional] 
  **targetType** | **String**|  | [optional] 
  **calculateTotalItems** | **Boolean**|  | [optional] 
@@ -255,7 +255,7 @@ Updates an application status.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.TemplateApplicationsApi();
-let id = null; // String | 
+let id = "id_example"; // String | 
 let templateApplicationStatusPatch = new JavascriptMsxSdk.TemplateApplicationStatusPatch(); // TemplateApplicationStatusPatch | 
 apiInstance.updateApplicationStatus(id, templateApplicationStatusPatch).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -270,7 +270,7 @@ apiInstance.updateApplicationStatus(id, templateApplicationStatusPatch).then((da
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
+ **id** | **String**|  | 
  **templateApplicationStatusPatch** | [**TemplateApplicationStatusPatch**](TemplateApplicationStatusPatch.md)|  | 
 
 ### Return type

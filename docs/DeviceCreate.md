@@ -9,9 +9,8 @@ Name | Type | Description | Notes
 **tenantId** | **String** |  | 
 **serviceType** | **String** |  | [optional] 
 **tags** | **{String: String}** |  | [optional] 
-**managed** | **Boolean** |  | [default to false]
+**managed** | **Boolean** |  | [optional] [default to false]
 **onboardType** | **String** |  | 
-**onboardInformation** | **{String: Object}** |  | [optional] 
 **attributes** | **{String: Object}** |  | [optional] 
 **name** | **String** |  | 
 **model** | **String** |  | 
@@ -19,6 +18,7 @@ Name | Type | Description | Notes
 **subType** | **String** |  | [optional] 
 **serialKey** | **String** |  | [optional] 
 **version** | **String** |  | [optional] 
-**complianceState** | [**DeviceComplianceState**](DeviceComplianceState.md) |  | [optional] 
+**complianceState** | **String** | Valid values: COMPLIANT, NOT_COMPLIANT, APPLICABLE, NOT_APPLICABLE, UNKNOWN | [optional] 
+**onboardInformation** | **{String: Object}** |  | [optional] 
 
 

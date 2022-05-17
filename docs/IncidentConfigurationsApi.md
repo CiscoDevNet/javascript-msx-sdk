@@ -70,7 +70,7 @@ Delete service now configuration, only if no associated entities exists.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.IncidentConfigurationsApi();
-let id = null; // String | 
+let id = "id_example"; // String | 
 apiInstance.deleteServiceNowConfiguration(id).then(() => {
   console.log('API called successfully.');
 }, (error) => {
@@ -84,7 +84,7 @@ apiInstance.deleteServiceNowConfiguration(id).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
+ **id** | **String**|  | 
 
 ### Return type
 
@@ -150,7 +150,7 @@ Returns a ServiceNow configuration.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.IncidentConfigurationsApi();
-let id = null; // String | 
+let id = "id_example"; // String | 
 apiInstance.getServiceNowConfiguration(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -164,7 +164,7 @@ apiInstance.getServiceNowConfiguration(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
+ **id** | **String**|  | 
 
 ### Return type
 
@@ -195,7 +195,7 @@ let apiInstance = new JavascriptMsxSdk.IncidentConfigurationsApi();
 let page = 0; // Number | 
 let pageSize = 10; // Number | 
 let opts = {
-  'tenantId': null, // String | 
+  'tenantId': "tenantId_example", // String | 
   'domain': "domain_example" // String | 
 };
 apiInstance.getServiceNowConfigurationsPage(page, pageSize, opts).then((data) => {
@@ -213,7 +213,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Number**|  | 
  **pageSize** | **Number**|  | 
- **tenantId** | [**String**](.md)|  | [optional] 
+ **tenantId** | **String**|  | [optional] 
  **domain** | **String**|  | [optional] 
 
 ### Return type

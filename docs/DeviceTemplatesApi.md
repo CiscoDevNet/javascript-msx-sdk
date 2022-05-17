@@ -110,7 +110,7 @@ Deletes a device template.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.DeviceTemplatesApi();
-let id = null; // String | 
+let id = "id_example"; // String | 
 apiInstance.deleteDeviceTemplate(id).then(() => {
   console.log('API called successfully.');
 }, (error) => {
@@ -124,7 +124,7 @@ apiInstance.deleteDeviceTemplate(id).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
+ **id** | **String**|  | 
 
 ### Return type
 
@@ -152,7 +152,7 @@ Returns a device template.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.DeviceTemplatesApi();
-let id = null; // String | 
+let id = "id_example"; // String | 
 apiInstance.getDeviceTemplate(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -166,7 +166,7 @@ apiInstance.getDeviceTemplate(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
+ **id** | **String**|  | 
 
 ### Return type
 
@@ -214,7 +214,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **allVersions** | **Boolean**|  | [optional] [default to false]
  **serviceType** | **String**|  | [optional] 
- **tenantId** | [**String**](.md)|  | [optional] 
+ **tenantId** | **String**|  | [optional] 
 
 ### Return type
 
@@ -286,7 +286,7 @@ Updates device template access.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.DeviceTemplatesApi();
-let id = null; // String | 
+let id = "id_example"; // String | 
 let deviceTemplateAccess = {"templateId":"49baa22e-9c25-4adc-ae30-21153965ea66","tenantIds":["e6d0e662-ed66-43ab-977a-35efc6cafe10"]}; // DeviceTemplateAccess | 
 apiInstance.updateDeviceTemplateAccess(id, deviceTemplateAccess).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -301,7 +301,7 @@ apiInstance.updateDeviceTemplateAccess(id, deviceTemplateAccess).then((data) => 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
+ **id** | **String**|  | 
  **deviceTemplateAccess** | [**DeviceTemplateAccess**](DeviceTemplateAccess.md)|  | 
 
 ### Return type

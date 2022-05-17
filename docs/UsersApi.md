@@ -68,7 +68,7 @@ Deletes a user by id.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.UsersApi();
-let id = null; // String | 
+let id = "id_example"; // String | 
 apiInstance.deleteUser(id).then(() => {
   console.log('API called successfully.');
 }, (error) => {
@@ -82,7 +82,7 @@ apiInstance.deleteUser(id).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
+ **id** | **String**|  | 
 
 ### Return type
 
@@ -148,7 +148,7 @@ Returns an existing user.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.UsersApi();
-let id = null; // String | 
+let id = "id_example"; // String | 
 apiInstance.getUser(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -162,7 +162,7 @@ apiInstance.getUser(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
+ **id** | **String**|  | 
 
 ### Return type
 
@@ -193,7 +193,7 @@ let apiInstance = new JavascriptMsxSdk.UsersApi();
 let page = 0; // Number | 
 let pageSize = 10; // Number | 
 let opts = {
-  'tenantId': null, // String | 
+  'tenantId': "tenantId_example", // String | 
   'deleted': true // Boolean | 
 };
 apiInstance.getUsersPage(page, pageSize, opts).then((data) => {
@@ -211,7 +211,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Number**|  | 
  **pageSize** | **Number**|  | 
- **tenantId** | [**String**](.md)|  | [optional] 
+ **tenantId** | **String**|  | [optional] 
  **deleted** | **Boolean**|  | [optional] 
 
 ### Return type
@@ -240,7 +240,7 @@ Updates an existing user.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.UsersApi();
-let id = null; // String | 
+let id = "id_example"; // String | 
 let userUpdate = {"firstName":"Christopher","lastName":"Eccleston","email":"noreply@cisco.com","roleIds":["c0895f00-d5d5-11ea-b88a-a7053c652ef4"],"tenantIds":["39ed2f7a-baf9-48b0-ad96-7f7828dc8b38"],"passwordPolicyName":"ppolicy_default","locale":"en_US"}; // UserUpdate | 
 apiInstance.updateUser(id, userUpdate).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -255,7 +255,7 @@ apiInstance.updateUser(id, userUpdate).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
+ **id** | **String**|  | 
  **userUpdate** | [**UserUpdate**](UserUpdate.md)|  | 
 
 ### Return type

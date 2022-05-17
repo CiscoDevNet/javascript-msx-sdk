@@ -25,7 +25,7 @@ Assigns a template to one or more tenants.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.TemplateAssignmentsApi();
-let id = null; // String | 
+let id = "id_example"; // String | 
 let requestBody = ["null"]; // [String] | 
 let opts = {
   'inheritable': true // Boolean | 
@@ -43,7 +43,7 @@ apiInstance.batchAssignTemplate(id, requestBody, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
+ **id** | **String**|  | 
  **requestBody** | [**[String]**](String.md)|  | 
  **inheritable** | **Boolean**|  | [optional] 
 
@@ -73,7 +73,7 @@ Unassigns a template from one or more tenants.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.TemplateAssignmentsApi();
-let id = null; // String | 
+let id = "id_example"; // String | 
 let requestBody = ["null"]; // [String] | 
 apiInstance.batchUnassignTemplate(id, requestBody).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -88,7 +88,7 @@ apiInstance.batchUnassignTemplate(id, requestBody).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
+ **id** | **String**|  | 
  **requestBody** | [**[String]**](String.md)|  | 
 
 ### Return type
@@ -117,7 +117,7 @@ Gets a template assignment.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.TemplateAssignmentsApi();
-let id = null; // String | ID of template assignment record.
+let id = "id_example"; // String | ID of template assignment record.
 apiInstance.getAssignment(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -131,7 +131,7 @@ apiInstance.getAssignment(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| ID of template assignment record. | 
+ **id** | **String**| ID of template assignment record. | 
 
 ### Return type
 
@@ -159,7 +159,7 @@ Gets a template assignment history.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.TemplateAssignmentsApi();
-let id = null; // String | 
+let id = "id_example"; // String | 
 apiInstance.getAssignmentHistory(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -173,7 +173,7 @@ apiInstance.getAssignmentHistory(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
+ **id** | **String**|  | 
 
 ### Return type
 
@@ -204,8 +204,8 @@ let apiInstance = new JavascriptMsxSdk.TemplateAssignmentsApi();
 let page = 0; // Number | 
 let pageSize = 10; // Number | 
 let opts = {
-  'templateId': null, // String | 
-  'tenantId': null, // String | 
+  'templateId': "templateId_example", // String | 
+  'tenantId': "tenantId_example", // String | 
   'calculateTotalItems': true // Boolean | 
 };
 apiInstance.getTemplateAssignmentsPage(page, pageSize, opts).then((data) => {
@@ -223,8 +223,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Number**|  | 
  **pageSize** | **Number**|  | 
- **templateId** | [**String**](.md)|  | [optional] 
- **tenantId** | [**String**](.md)|  | [optional] 
+ **templateId** | **String**|  | [optional] 
+ **tenantId** | **String**|  | [optional] 
  **calculateTotalItems** | **Boolean**|  | [optional] 
 
 ### Return type
@@ -253,7 +253,7 @@ Updates a template assignment status.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.TemplateAssignmentsApi();
-let id = null; // String | ID of template assignment record.
+let id = "id_example"; // String | ID of template assignment record.
 let templateAssignmentStatusPatch = new JavascriptMsxSdk.TemplateAssignmentStatusPatch(); // TemplateAssignmentStatusPatch | 
 apiInstance.updateAssignmentStatus(id, templateAssignmentStatusPatch).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -268,7 +268,7 @@ apiInstance.updateAssignmentStatus(id, templateAssignmentStatusPatch).then((data
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| ID of template assignment record. | 
+ **id** | **String**| ID of template assignment record. | 
  **templateAssignmentStatusPatch** | [**TemplateAssignmentStatusPatch**](TemplateAssignmentStatusPatch.md)|  | 
 
 ### Return type

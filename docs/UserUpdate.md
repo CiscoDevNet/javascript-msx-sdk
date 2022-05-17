@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **email** | **String** |  | 
 **roleIds** | **[String]** |  | [optional] 
 **tenantIds** | **[String]** |  | [optional] 
-**passwordPolicyName** | **String** |  | 
+**passwordPolicyName** | **String** |  | [optional] 
 **locale** | **String** |  | [optional] 
 
 

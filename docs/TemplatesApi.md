@@ -25,7 +25,7 @@ Deletes a template.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.TemplatesApi();
-let id = null; // String | 
+let id = "id_example"; // String | 
 apiInstance.deleteTemplate(id).then(() => {
   console.log('API called successfully.');
 }, (error) => {
@@ -39,7 +39,7 @@ apiInstance.deleteTemplate(id).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
+ **id** | **String**|  | 
 
 ### Return type
 
@@ -67,7 +67,7 @@ Returns a template by id.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.TemplatesApi();
-let id = null; // String | 
+let id = "id_example"; // String | 
 apiInstance.getTemplate(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -81,7 +81,7 @@ apiInstance.getTemplate(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
+ **id** | **String**|  | 
 
 ### Return type
 
@@ -109,7 +109,7 @@ Returns a template history by id.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.TemplatesApi();
-let id = null; // String | 
+let id = "id_example"; // String | 
 apiInstance.getTemplateHistory(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -123,7 +123,7 @@ apiInstance.getTemplateHistory(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
+ **id** | **String**|  | 
 
 ### Return type
 
@@ -247,7 +247,7 @@ Updates a template status.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.TemplatesApi();
-let id = null; // String | 
+let id = "id_example"; // String | 
 let templatePatch = new JavascriptMsxSdk.TemplatePatch(); // TemplatePatch | 
 apiInstance.updateTemplateStatus(id, templatePatch).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -262,7 +262,7 @@ apiInstance.updateTemplateStatus(id, templatePatch).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
+ **id** | **String**|  | 
  **templatePatch** | [**TemplatePatch**](TemplatePatch.md)|  | 
 
 ### Return type

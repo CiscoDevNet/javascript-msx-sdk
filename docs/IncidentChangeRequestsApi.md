@@ -68,7 +68,7 @@ import JavascriptMsxSdk from 'javascript-msx-sdk';
 let apiInstance = new JavascriptMsxSdk.IncidentChangeRequestsApi();
 let id = "id_example"; // String | 
 let opts = {
-  'tenantId': null // String | Required for bi-directional scenario
+  'tenantId': "tenantId_example" // String | Required for bi-directional scenario
 };
 apiInstance.deleteChangeRequest(id, opts).then(() => {
   console.log('API called successfully.');
@@ -84,7 +84,7 @@ apiInstance.deleteChangeRequest(id, opts).then(() => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  | 
- **tenantId** | [**String**](.md)| Required for bi-directional scenario | [optional] 
+ **tenantId** | **String**| Required for bi-directional scenario | [optional] 
 
 ### Return type
 
@@ -114,7 +114,7 @@ import JavascriptMsxSdk from 'javascript-msx-sdk';
 let apiInstance = new JavascriptMsxSdk.IncidentChangeRequestsApi();
 let id = "id_example"; // String | Change Request Number  CHG0030022
 let opts = {
-  'tenantId': null // String | Required for bi-directional scenario
+  'tenantId': "tenantId_example" // String | Required for bi-directional scenario
 };
 apiInstance.getChangeRequest(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -130,7 +130,7 @@ apiInstance.getChangeRequest(id, opts).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Change Request Number  CHG0030022 | 
- **tenantId** | [**String**](.md)| Required for bi-directional scenario | [optional] 
+ **tenantId** | **String**| Required for bi-directional scenario | [optional] 
 
 ### Return type
 
@@ -161,7 +161,7 @@ let apiInstance = new JavascriptMsxSdk.IncidentChangeRequestsApi();
 let page = 0; // Number | 
 let pageSize = 10; // Number | 
 let opts = {
-  'tenantId': null // String | 
+  'tenantId': "tenantId_example" // String | 
 };
 apiInstance.getChangeRequestsPage(page, pageSize, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -178,7 +178,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Number**|  | 
  **pageSize** | **Number**|  | 
- **tenantId** | [**String**](.md)|  | [optional] 
+ **tenantId** | **String**|  | [optional] 
 
 ### Return type
 

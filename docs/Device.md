@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **id** | **String** |  | [optional] 
 **userId** | **String** |  | [optional] 
 **providerId** | **String** |  | [optional] 
-**vulnerabilityState** | [**DeviceVulnerabilityState**](DeviceVulnerabilityState.md) |  | [optional] 
+**vulnerabilityState** | **String** | Valid values: VULNERABLE, NOT_VULNERABLE, NOT_APPLICABLE, UNKNOWN | [optional] 
 **createdOn** | **Date** |  | [optional] 
 **modifiedOn** | **Date** |  | [optional] 
 **serviceInstanceId** | **String** |  | [optional] 
@@ -15,9 +15,8 @@ Name | Type | Description | Notes
 **tenantId** | **String** |  | 
 **serviceType** | **String** |  | [optional] 
 **tags** | **{String: String}** |  | [optional] 
-**managed** | **Boolean** |  | [default to false]
+**managed** | **Boolean** |  | [optional] [default to false]
 **onboardType** | **String** |  | 
-**onboardInformation** | **{String: Object}** |  | [optional] 
 **attributes** | **{String: Object}** |  | [optional] 
 **name** | **String** |  | 
 **model** | **String** |  | 
@@ -25,6 +24,7 @@ Name | Type | Description | Notes
 **subType** | **String** |  | [optional] 
 **serialKey** | **String** |  | [optional] 
 **version** | **String** |  | [optional] 
-**complianceState** | [**DeviceComplianceState**](DeviceComplianceState.md) |  | [optional] 
+**complianceState** | **String** | Valid values: COMPLIANT, NOT_COMPLIANT, APPLICABLE, NOT_APPLICABLE, UNKNOWN | [optional] 
+**onboardInformation** | **{String: Object}** |  | [optional] 
 
 

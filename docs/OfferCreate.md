@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **description** | **String** |  | 
 **productId** | **String** |  | 
 **version** | **Number** |  | 
-**displayOrder** | **Number** |  | 
+**displayOrder** | **Number** |  | [optional] 
 **image** | **String** |  | [optional] 
 **price** | **String** |  | [optional] 
 **type** | **String** |  | [optional] 

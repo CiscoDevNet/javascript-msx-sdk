@@ -28,7 +28,7 @@ Add devices to a site.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.SitesApi();
-let id = null; // String | 
+let id = "id_example"; // String | 
 let requestBody = ["null"]; // [String] | 
 apiInstance.addDevicesToSite(id, requestBody).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -43,7 +43,7 @@ apiInstance.addDevicesToSite(id, requestBody).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
+ **id** | **String**|  | 
  **requestBody** | [**[String]**](String.md)|  | 
 
 ### Return type
@@ -72,7 +72,7 @@ Add services to a site.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.SitesApi();
-let id = null; // String | 
+let id = "id_example"; // String | 
 let requestBody = ["null"]; // [String] | 
 apiInstance.addServicesToSite(id, requestBody).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -87,7 +87,7 @@ apiInstance.addServicesToSite(id, requestBody).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
+ **id** | **String**|  | 
  **requestBody** | [**[String]**](String.md)|  | 
 
 ### Return type
@@ -158,7 +158,7 @@ Deletes a site.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.SitesApi();
-let id = null; // String | 
+let id = "id_example"; // String | 
 apiInstance.deleteSite(id).then(() => {
   console.log('API called successfully.');
 }, (error) => {
@@ -172,7 +172,7 @@ apiInstance.deleteSite(id).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
+ **id** | **String**|  | 
 
 ### Return type
 
@@ -200,7 +200,7 @@ Returns a site.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.SitesApi();
-let id = null; // String | 
+let id = "id_example"; // String | 
 let opts = {
   'showImage': false // Boolean | 
 };
@@ -217,7 +217,7 @@ apiInstance.getSite(id, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
+ **id** | **String**|  | 
  **showImage** | **Boolean**|  | [optional] [default to false]
 
 ### Return type
@@ -249,7 +249,7 @@ let apiInstance = new JavascriptMsxSdk.SitesApi();
 let page = 0; // Number | 
 let pageSize = 10; // Number | 
 let opts = {
-  'tenantId': null, // String | 
+  'tenantId': "tenantId_example", // String | 
   'includeSubtenants': false, // Boolean | 
   'serviceId': "serviceId_example", // String | 
   'serviceType': "serviceType_example", // String | 
@@ -274,7 +274,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Number**|  | 
  **pageSize** | **Number**|  | 
- **tenantId** | [**String**](.md)|  | [optional] 
+ **tenantId** | **String**|  | [optional] 
  **includeSubtenants** | **Boolean**|  | [optional] [default to false]
  **serviceId** | **String**|  | [optional] 
  **serviceType** | **String**|  | [optional] 
@@ -310,7 +310,7 @@ Removes devices from a site.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.SitesApi();
-let id = null; // String | 
+let id = "id_example"; // String | 
 let requestBody = ["null"]; // [String] | 
 apiInstance.removeDevicesFromSite(id, requestBody).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -325,7 +325,7 @@ apiInstance.removeDevicesFromSite(id, requestBody).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
+ **id** | **String**|  | 
  **requestBody** | [**[String]**](String.md)|  | 
 
 ### Return type
@@ -398,7 +398,7 @@ Updates a site.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.SitesApi();
-let id = null; // String | 
+let id = "id_example"; // String | 
 let siteUpdate = {"name":"Site Three","description":"A new description with better words.","attributes":{}}; // SiteUpdate | 
 let opts = {
   'sendNotification': false // Boolean | 
@@ -416,7 +416,7 @@ apiInstance.updateSite(id, siteUpdate, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
+ **id** | **String**|  | 
  **siteUpdate** | [**SiteUpdate**](SiteUpdate.md)|  | 
  **sendNotification** | **Boolean**|  | [optional] [default to false]
 

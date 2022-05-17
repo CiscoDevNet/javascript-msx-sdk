@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**nextBilledOn** | **String** |  | 
+**nextBilledOn** | **Date** |  | 
 
 

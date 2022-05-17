@@ -22,7 +22,7 @@ Delete a registration.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.RegistrationApi();
-let id = null; // String | 
+let id = "id_example"; // String | 
 apiInstance.deleteRegisteredProductVersion(id).then(() => {
   console.log('API called successfully.');
 }, (error) => {
@@ -36,7 +36,7 @@ apiInstance.deleteRegisteredProductVersion(id).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
+ **id** | **String**|  | 
 
 ### Return type
 

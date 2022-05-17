@@ -27,7 +27,7 @@ let opts = {
   'password': "password_example", // String | 
   'accessToken': "accessToken_example", // String | 
   'switchUsername': "switchUsername_example", // String | 
-  'tenantId': null, // String | 
+  'tenantId': "tenantId_example", // String | 
   'scope': "scope_example", // String | 
   'nonce': "nonce_example", // String | 
   'tenantName': "tenantName_example" // String | 
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
  **password** | **String**|  | [optional] 
  **accessToken** | **String**|  | [optional] 
  **switchUsername** | **String**|  | [optional] 
- **tenantId** | [**String**](String.md)|  | [optional] 
+ **tenantId** | **String**|  | [optional] 
  **scope** | **String**|  | [optional] 
  **nonce** | **String**|  | [optional] 
  **tenantName** | **String**|  | [optional] 

@@ -5,8 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **eventId** | **String** |  | 
-**lastBilledOn** | **String** |  | 
-**nextBilledOn** | **String** |  | 
+**lastBilledOn** | **Date** |  | 
+**nextBilledOn** | **Date** |  | 
 **tenantId** | **String** |  | 
 
 

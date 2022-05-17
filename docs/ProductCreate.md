@@ -14,11 +14,11 @@ Name | Type | Description | Notes
 **displayOrder** | **Number** |  | [optional] 
 **active** | **Boolean** |  | [optional] 
 **orderLimit** | **Number** |  | [optional] 
-**options** | [**[ServiceElement]**](ServiceElement.md) |  | 
+**options** | [**[ServiceElement]**](ServiceElement.md) |  | [optional] 
 **properties** | [**[ServiceElement]**](ServiceElement.md) |  | [optional] 
-**configuration** | **{String: String}** |  | 
-**isResource** | **Boolean** |  | 
-**hasChildren** | **Boolean** |  | 
+**configuration** | **{String: String}** |  | [optional] 
+**isResource** | **Boolean** |  | [optional] 
+**hasChildren** | **Boolean** |  | [optional] 
 **parentId** | **String** |  | [optional] 
 **serviceExtensions** | [**[NSOConfigDataXPath]**](NSOConfigDataXPath.md) |  | [optional] 
 **serviceConfigQueryRootXPaths** | **[String]** |  | [optional] 

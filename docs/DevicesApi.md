@@ -17,6 +17,7 @@ Method | HTTP request | Description
 [**patchDevice**](DevicesApi.md#patchDevice) | **PATCH** /manage/api/v8/devices/{id} | Update a device.
 [**redeployDevice**](DevicesApi.md#redeployDevice) | **POST** /manage/api/v8/devices/{id}/redeploy | Dedeploys a device.
 [**updateDevice**](DevicesApi.md#updateDevice) | **PUT** /manage/api/v8/devices/{id} | Update a device.
+[**updateDeviceConfig**](DevicesApi.md#updateDeviceConfig) | **POST** /manage/api/v8/devices/{id}/config/update | push device configuration to the actual device
 [**updateDeviceTemplates**](DevicesApi.md#updateDeviceTemplates) | **PUT** /manage/api/v8/devices/{id}/templates | Update device templates that are already attached to a device.
 
 
@@ -204,7 +205,7 @@ import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.DevicesApi();
 let id = "id_example"; // String | 
-let templateId = null; // String | 
+let templateId = "templateId_example"; // String | 
 apiInstance.detachDeviceTemplate(id, templateId).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -219,7 +220,7 @@ apiInstance.detachDeviceTemplate(id, templateId).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  | 
- **templateId** | [**String**](.md)|  | 
+ **templateId** | **String**|  | 
 
 ### Return type
 
@@ -375,7 +376,7 @@ import JavascriptMsxSdk from 'javascript-msx-sdk';
 let apiInstance = new JavascriptMsxSdk.DevicesApi();
 let id = "id_example"; // String | 
 let opts = {
-  'templateId': null // String | 
+  'templateId': "templateId_example" // String | 
 };
 apiInstance.getDeviceTemplateHistory(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -391,7 +392,7 @@ apiInstance.getDeviceTemplateHistory(id, opts).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  | 
- **templateId** | [**String**](.md)|  | [optional] 
+ **templateId** | **String**|  | [optional] 
 
 ### Return type
 
@@ -434,8 +435,8 @@ let opts = {
   'tenantIds': ["null"], // [String] | 
   'includeSubtenants': false, // Boolean | 
   'severities': ["null"], // [String] | 
-  'complianceStates': [new JavascriptMsxSdk.DeviceComplianceState()], // [DeviceComplianceState] | 
-  'vulnerabilityStates': [new JavascriptMsxSdk.DeviceVulnerabilityState()], // [DeviceVulnerabilityState] | 
+  'complianceStates': ["null"], // [String] | Valid values: COMPLIANT, NOT_COMPLIANT, APPLICABLE, NOT_APPLICABLE, UNKNOWN
+  'vulnerabilityStates': ["null"], // [String] | Valid values: VULNERABLE, NOT_VULNERABLE, NOT_APPLICABLE, UNKNOWN
   'sortBy': name, // String | 
   'sortOrder': "'asc'" // String | 
 };
@@ -466,8 +467,8 @@ Name | Type | Description  | Notes
  **tenantIds** | [**[String]**](String.md)|  | [optional] 
  **includeSubtenants** | **Boolean**|  | [optional] [default to false]
  **severities** | [**[String]**](String.md)|  | [optional] 
- **complianceStates** | [**[DeviceComplianceState]**](DeviceComplianceState.md)|  | [optional] 
- **vulnerabilityStates** | [**[DeviceVulnerabilityState]**](DeviceVulnerabilityState.md)|  | [optional] 
+ **complianceStates** | [**[String]**](String.md)| Valid values: COMPLIANT, NOT_COMPLIANT, APPLICABLE, NOT_APPLICABLE, UNKNOWN | [optional] 
+ **vulnerabilityStates** | [**[String]**](String.md)| Valid values: VULNERABLE, NOT_VULNERABLE, NOT_APPLICABLE, UNKNOWN | [optional] 
  **sortBy** | **String**|  | [optional] 
  **sortOrder** | **String**|  | [optional] [default to &#39;asc&#39;]
 
@@ -490,6 +491,8 @@ No authorization required
 > Device patchDevice(id, devicePatch)
 
 Update a device.
+
+When present, property values are replaced in their entirety (i.e. object/map values are not merged)
 
 ### Example
 
@@ -604,6 +607,50 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Device**](Device.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## updateDeviceConfig
+
+> ManageChangeRequestPending updateDeviceConfig(id, deviceConfigUpdate)
+
+push device configuration to the actual device
+
+### Example
+
+```javascript
+import JavascriptMsxSdk from 'javascript-msx-sdk';
+
+let apiInstance = new JavascriptMsxSdk.DevicesApi();
+let id = "id_example"; // String | 
+let deviceConfigUpdate = {"correlationId":"e7e20070-9d67-40a8-a21d-f655606b7421","configContent":"Building configuration...\n!\n! Last configuration change at 20:36:57 UTC Tue Aug 4 2020\n!\nversion 16.9\nservice timestamps debug datetime msec\nservice timestamps log datetime msec\nservice password-encryption\nservice call-home\nplatform qfp utilization monitor load 80\nno platform punt-keepalive disable-kernel-core\nplatform console virtual\nplatform hardware throughput level MB 100\n!\nlength 0\ntransport input ssh\nline vty 5 15\nexec-timeout 30 0\nprivilege level 15\nauthorization exec none\nlogging synchronous\ntransport input ssh\n!\n!\n!\n!\n!\n!\n!\npnp profile msx-pnp\ntransport https ipv4 192.171.16.174 port 8443 source GigabitEthernet1\nend\n","format":"cli"}; // DeviceConfigUpdate | 
+apiInstance.updateDeviceConfig(id, deviceConfigUpdate).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**|  | 
+ **deviceConfigUpdate** | [**DeviceConfigUpdate**](DeviceConfigUpdate.md)|  | 
+
+### Return type
+
+[**ManageChangeRequestPending**](ManageChangeRequestPending.md)
 
 ### Authorization
 

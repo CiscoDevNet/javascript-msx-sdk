@@ -69,7 +69,7 @@ Deletes a product.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.ProductsApi();
-let id = null; // String | 
+let id = "id_example"; // String | 
 apiInstance.deleteProduct(id).then(() => {
   console.log('API called successfully.');
 }, (error) => {
@@ -83,7 +83,7 @@ apiInstance.deleteProduct(id).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
+ **id** | **String**|  | 
 
 ### Return type
 
@@ -111,7 +111,7 @@ Returns a product.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.ProductsApi();
-let id = null; // String | 
+let id = "id_example"; // String | 
 apiInstance.getProduct(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -125,7 +125,7 @@ apiInstance.getProduct(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
+ **id** | **String**|  | 
 
 ### Return type
 
@@ -153,7 +153,7 @@ Returns a list of tenant assignments for a product .
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.ProductsApi();
-let id = null; // String | 
+let id = "id_example"; // String | 
 apiInstance.getProductAssignmentsList(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -167,7 +167,7 @@ apiInstance.getProductAssignmentsList(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
+ **id** | **String**|  | 
 
 ### Return type
 
@@ -196,7 +196,7 @@ import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.ProductsApi();
 let opts = {
-  'tenantId': null // String | 
+  'tenantId': "tenantId_example" // String | 
 };
 apiInstance.getProductsCount(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -211,7 +211,7 @@ apiInstance.getProductsCount(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tenantId** | [**String**](.md)|  | [optional] 
+ **tenantId** | **String**|  | [optional] 
 
 ### Return type
 
@@ -242,7 +242,7 @@ let apiInstance = new JavascriptMsxSdk.ProductsApi();
 let page = 0; // Number | 
 let pageSize = 10; // Number | 
 let opts = {
-  'tenantId': null // String | 
+  'tenantId': "tenantId_example" // String | 
 };
 apiInstance.getProductsPage(page, pageSize, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -259,7 +259,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Number**|  | 
  **pageSize** | **Number**|  | 
- **tenantId** | [**String**](.md)|  | [optional] 
+ **tenantId** | **String**|  | [optional] 
 
 ### Return type
 
@@ -287,7 +287,7 @@ Updates a product.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.ProductsApi();
-let id = null; // String | 
+let id = "id_example"; // String | 
 let productUpdate = {"name":"vbranch","label":"cisco.catalog.service.vbranch.name","version":"1","description":"cisco.catalog.service.vbranch.description","image":"/services/vbranch/images/icons/image_vbranch_service.svg","orderLimit":1,"multipleInstanceAllowed":false,"unitOfMeasure":null,"options":[],"properties":[],"bandwidthPrioritization":null,"configuration":{"device":"false","parts":"2","showOffers":"true","validation":"none"},"isResource":false,"hasChildren":false,"parentId":null,"serviceExtensions":[],"serviceConfigQueryRootXPaths":[],"uiConfig":null,"tags":["Preview","EFT"]}; // ProductUpdate | 
 apiInstance.updateProduct(id, productUpdate).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -302,7 +302,7 @@ apiInstance.updateProduct(id, productUpdate).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
+ **id** | **String**|  | 
  **productUpdate** | [**ProductUpdate**](ProductUpdate.md)|  | 
 
 ### Return type
@@ -331,7 +331,7 @@ Updates the tenant assignments for a product.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.ProductsApi();
-let id = null; // String | 
+let id = "id_example"; // String | 
 let requestBody = ["e8ff9360-c8f1-4f06-84d8-d8105bd29e1e","3c64b303-ec28-4fe2-99b5-13f521b92700","48feaddb-45d0-4126-a216-3e450bfdbba4"]; // [String] | 
 apiInstance.updateProductAssignments(id, requestBody).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -346,7 +346,7 @@ apiInstance.updateProductAssignments(id, requestBody).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
+ **id** | **String**|  | 
  **requestBody** | [**[String]**](String.md)|  | 
 
 ### Return type

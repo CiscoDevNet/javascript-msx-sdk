@@ -69,7 +69,7 @@ Deletes a product offer
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.OffersApi();
-let id = null; // String | 
+let id = "id_example"; // String | 
 apiInstance.deleteOffer(id).then(() => {
   console.log('API called successfully.');
 }, (error) => {
@@ -83,7 +83,7 @@ apiInstance.deleteOffer(id).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
+ **id** | **String**|  | 
 
 ### Return type
 
@@ -111,7 +111,7 @@ Returns a product offer.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.OffersApi();
-let id = null; // String | 
+let id = "id_example"; // String | 
 apiInstance.getOffer(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -125,7 +125,7 @@ apiInstance.getOffer(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
+ **id** | **String**|  | 
 
 ### Return type
 
@@ -153,7 +153,7 @@ Returns a list of tenant assignments for a product offer.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.OffersApi();
-let id = null; // String | 
+let id = "id_example"; // String | 
 apiInstance.getOfferAssignmentsList(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -167,7 +167,7 @@ apiInstance.getOfferAssignmentsList(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
+ **id** | **String**|  | 
 
 ### Return type
 
@@ -196,8 +196,8 @@ import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.OffersApi();
 let opts = {
-  'productId': null, // String | 
-  'tenantId': null // String | 
+  'productId': "productId_example", // String | 
+  'tenantId': "tenantId_example" // String | 
 };
 apiInstance.getOffersCount(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -212,8 +212,8 @@ apiInstance.getOffersCount(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **productId** | [**String**](.md)|  | [optional] 
- **tenantId** | [**String**](.md)|  | [optional] 
+ **productId** | **String**|  | [optional] 
+ **tenantId** | **String**|  | [optional] 
 
 ### Return type
 
@@ -244,7 +244,7 @@ let apiInstance = new JavascriptMsxSdk.OffersApi();
 let page = 0; // Number | 
 let pageSize = 10; // Number | 
 let opts = {
-  'productId': null, // String | 
+  'productId': "productId_example", // String | 
   'tenantIds': ["null"] // [String] | 
 };
 apiInstance.getOffersPage(page, pageSize, opts).then((data) => {
@@ -262,7 +262,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Number**|  | 
  **pageSize** | **Number**|  | 
- **productId** | [**String**](.md)|  | [optional] 
+ **productId** | **String**|  | [optional] 
  **tenantIds** | [**[String]**](String.md)|  | [optional] 
 
 ### Return type
@@ -291,7 +291,7 @@ Updates a product offer.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.OffersApi();
-let id = null; // String | 
+let id = "id_example"; // String | 
 let offerUpdate = {"name":"branches","label":"cisco.consume.service.vbranch.offer.name","description":"cisco.consume.service.vbranch.offer.description","productId":"46bad1ba-2704-419d-b9b4-f1cdff79da4f","version":1,"displayOrder":1,"image":"/services/vbranch/images/icons/image_vbranch_service.svg","price":null,"type":null,"supportedProperties":["Basic-small"],"supportedOptions":[{"name":"Template_Development_Environment","value":"Yes"},{"name":"Zero_Touch_Deployment","value":"Yes"},{"name":"Custom_Service_Chaining","value":"Yes"},{"name":"Third_Party","value":"Yes"}],"approvals":null}; // OfferUpdate | 
 apiInstance.updateOffer(id, offerUpdate).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -306,7 +306,7 @@ apiInstance.updateOffer(id, offerUpdate).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
+ **id** | **String**|  | 
  **offerUpdate** | [**OfferUpdate**](OfferUpdate.md)|  | 
 
 ### Return type
@@ -335,7 +335,7 @@ Updates the tenant assignemnts for a product offer.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.OffersApi();
-let id = null; // String | 
+let id = "id_example"; // String | 
 let requestBody = ["e8ff9360-c8f1-4f06-84d8-d8105bd29e1e","3c64b303-ec28-4fe2-99b5-13f521b92700","48feaddb-45d0-4126-a216-3e450bfdbba4"]; // [String] | 
 apiInstance.updateOfferAssignments(id, requestBody).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -350,7 +350,7 @@ apiInstance.updateOfferAssignments(id, requestBody).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
+ **id** | **String**|  | 
  **requestBody** | [**[String]**](String.md)|  | 
 
 ### Return type

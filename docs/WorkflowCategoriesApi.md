@@ -24,7 +24,7 @@ Creates a new workflow category.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.WorkflowCategoriesApi();
-let tenantId = null; // String | 
+let tenantId = "tenantId_example"; // String | 
 let workflowCategoryCreate = {"name":"Category One","title":"Category One","description":"A description of category one.","schema_id":"01HQR4T0U6YBE7USwHQiUhXogAACos2iac6"}; // WorkflowCategoryCreate | 
 apiInstance.createWorkflowCategory(tenantId, workflowCategoryCreate).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -39,7 +39,7 @@ apiInstance.createWorkflowCategory(tenantId, workflowCategoryCreate).then((data)
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tenantId** | [**String**](.md)|  | 
+ **tenantId** | **String**|  | 
  **workflowCategoryCreate** | [**WorkflowCategoryCreate**](WorkflowCategoryCreate.md)|  | 
 
 ### Return type
@@ -111,7 +111,7 @@ import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.WorkflowCategoriesApi();
 let opts = {
-  'tenantId': null // String | 
+  'tenantId': "tenantId_example" // String | 
 };
 apiInstance.getWorkflowCategoriesList(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -126,7 +126,7 @@ apiInstance.getWorkflowCategoriesList(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tenantId** | [**String**](.md)|  | [optional] 
+ **tenantId** | **String**|  | [optional] 
 
 ### Return type
 

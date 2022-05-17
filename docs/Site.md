@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **address** | [**SiteAddress**](SiteAddress.md) |  | [optional] 
 **contact** | [**SiteContact**](SiteContact.md) |  | [optional] 
 **image** | **String** |  | [optional] 
+**managingControlPlaneId** | **String** |  | [optional] 
 **attributes** | **{String: String}** |  | [optional] 
 **devices** | [**[DeviceSummary]**](DeviceSummary.md) |  | [optional] 
 **serviceIds** | **[String]** |  | [optional] 

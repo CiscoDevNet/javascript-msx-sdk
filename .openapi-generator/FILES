@@ -40,7 +40,7 @@ docs/ChangeRequestsPageAllOf.md
 docs/CostSummary.md
 docs/Device.md
 docs/DeviceAllOf.md
-docs/DeviceComplianceState.md
+docs/DeviceConfigUpdate.md
 docs/DeviceCreate.md
 docs/DeviceCreateAllOf.md
 docs/DevicePatch.md
@@ -60,7 +60,6 @@ docs/DeviceTemplateVersionCreate.md
 docs/DeviceTemplatesApi.md
 docs/DeviceUpdate.md
 docs/DeviceUpdateAllOf.md
-docs/DeviceVulnerabilityState.md
 docs/DevicesApi.md
 docs/DevicesPage.md
 docs/DevicesPageAllOf.md
@@ -333,7 +332,7 @@ src/model/ChangeRequestsPageAllOf.js
 src/model/CostSummary.js
 src/model/Device.js
 src/model/DeviceAllOf.js
-src/model/DeviceComplianceState.js
+src/model/DeviceConfigUpdate.js
 src/model/DeviceCreate.js
 src/model/DeviceCreateAllOf.js
 src/model/DevicePatch.js
@@ -352,7 +351,6 @@ src/model/DeviceTemplateUpdateRequest.js
 src/model/DeviceTemplateVersionCreate.js
 src/model/DeviceUpdate.js
 src/model/DeviceUpdateAllOf.js
-src/model/DeviceVulnerabilityState.js
 src/model/DevicesPage.js
 src/model/DevicesPageAllOf.js
 src/model/Error.js
@@ -592,7 +590,7 @@ test/model/ChangeRequestsPageAllOf.spec.js
 test/model/CostSummary.spec.js
 test/model/Device.spec.js
 test/model/DeviceAllOf.spec.js
-test/model/DeviceComplianceState.spec.js
+test/model/DeviceConfigUpdate.spec.js
 test/model/DeviceCreate.spec.js
 test/model/DeviceCreateAllOf.spec.js
 test/model/DevicePatch.spec.js
@@ -611,7 +609,6 @@ test/model/DeviceTemplateUpdateRequest.spec.js
 test/model/DeviceTemplateVersionCreate.spec.js
 test/model/DeviceUpdate.spec.js
 test/model/DeviceUpdateAllOf.spec.js
-test/model/DeviceVulnerabilityState.spec.js
 test/model/DevicesPage.spec.js
 test/model/DevicesPageAllOf.spec.js
 test/model/Error.spec.js

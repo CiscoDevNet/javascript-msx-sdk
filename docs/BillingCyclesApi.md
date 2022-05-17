@@ -71,7 +71,7 @@ Needs MANAGE_BILLINGCYCLE permission to delete a billing cycle.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.BillingCyclesApi();
-let id = null; // String | 
+let id = "id_example"; // String | 
 apiInstance.deleteBillingCycle(id).then(() => {
   console.log('API called successfully.');
 }, (error) => {
@@ -85,7 +85,7 @@ apiInstance.deleteBillingCycle(id).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
+ **id** | **String**|  | 
 
 ### Return type
 
@@ -115,7 +115,7 @@ Needs VIEW_BILLINGCYCLE permission to get billing cycle detail.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.BillingCyclesApi();
-let id = null; // String | 
+let id = "id_example"; // String | 
 apiInstance.getBillingCycle(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -129,7 +129,7 @@ apiInstance.getBillingCycle(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
+ **id** | **String**|  | 
 
 ### Return type
 
@@ -159,7 +159,7 @@ Needs VIEW_BILLINGCYCLE permission to view the billing cycle details.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.BillingCyclesApi();
-let tenantId = null; // String | 
+let tenantId = "tenantId_example"; // String | 
 let page = 0; // Number | 
 let pageSize = 10; // Number | 
 let opts = {
@@ -178,7 +178,7 @@ apiInstance.getBillingCyclesPage(tenantId, page, pageSize, opts).then((data) => 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tenantId** | [**String**](.md)|  | 
+ **tenantId** | **String**|  | 
  **page** | **Number**|  | 
  **pageSize** | **Number**|  | 
  **nextBilledOn** | **Date**|  | [optional] 
@@ -255,7 +255,7 @@ Needs MANAGE_BILLINGCYCLE permission to update a billing cycle detail.
 import JavascriptMsxSdk from 'javascript-msx-sdk';
 
 let apiInstance = new JavascriptMsxSdk.BillingCyclesApi();
-let id = null; // String | 
+let id = "id_example"; // String | 
 let billingCycleUpdate = new JavascriptMsxSdk.BillingCycleUpdate(); // BillingCycleUpdate | 
 apiInstance.updateBillingCycle(id, billingCycleUpdate).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -270,7 +270,7 @@ apiInstance.updateBillingCycle(id, billingCycleUpdate).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
+ **id** | **String**|  | 
  **billingCycleUpdate** | [**BillingCycleUpdate**](BillingCycleUpdate.md)|  | 
 
 ### Return type
